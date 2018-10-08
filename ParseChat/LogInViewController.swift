@@ -28,7 +28,7 @@ class LogInViewController: UIViewController {
         let password = passwordTextField.text
         
         if (username?.isEmpty)! || (password?.isEmpty)! {
-            errorLabel.text = "Input valid username and password1"
+            errorLabel.text = "Input valid username & password"
             
             
         }
@@ -41,6 +41,8 @@ class LogInViewController: UIViewController {
             newUser.signUpInBackground { (success: Bool, error: Error?) in
                 if success {
                     print("Yay created a user!")
+                    
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
                 else {
                     print(error?.localizedDescription)
@@ -58,7 +60,7 @@ class LogInViewController: UIViewController {
         let password = passwordTextField.text
         
         if (username?.isEmpty)! || (password?.isEmpty)! {
-            errorLabel.text = "Input valid username and password3"
+            errorLabel.text = "Input valid username & password"
             
             }
         else {
@@ -66,9 +68,10 @@ class LogInViewController: UIViewController {
                 if user != nil {
                     print("You're logged in!")
     
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 }
                 else {
-                    self.errorLabel.text = "Invalid username or password2"
+                    self.errorLabel.text = "Invalid username or password"
                 }
     
             }
