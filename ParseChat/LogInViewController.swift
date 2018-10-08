@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LogInViewController: UIViewController {
 
@@ -16,16 +17,66 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        errorLabel.text = "   "
         
     }
     
     
     @IBAction func onSignUp(_ sender: Any) {
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        
+        if (username?.isEmpty)! || (password?.isEmpty)! {
+            errorLabel.text = "Input valid username and password1"
+            
+            
+        }
+        else {
+            let newUser = PFUser()
+            
+            newUser.username = username
+            newUser.password = password
+            
+            newUser.signUpInBackground { (success: Bool, error: Error?) in
+                if success {
+                    print("Yay created a user!")
+                }
+                else {
+                    print(error?.localizedDescription)
+                    
+                    if error?._code == 202 {
+                        print("Username is taken")
+                        self.errorLabel.text = "Account already exists"
+                    }
+                }
+            }        }
     }
     
     @IBAction func onLogIn(_ sender: Any) {
-    }
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        
+        if (username?.isEmpty)! || (password?.isEmpty)! {
+            errorLabel.text = "Input valid username and password3"
+            
+            }
+        else {
+            PFUser.logInWithUsername(inBackground: username!, password: password!) { (user: PFUser?, error: Error?) in
+                if user != nil {
+                    print("You're logged in!")
     
-
+                }
+                else {
+                    self.errorLabel.text = "Invalid username or password2"
+                }
+    
+            }
+        
+        }
+    
+    
+    
+    
+}
 }
