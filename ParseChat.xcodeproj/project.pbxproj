@@ -15,6 +15,7 @@
 		5D5C3FBB216BFEE000FCC6A9 /* ParseChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5C3FBA216BFEE000FCC6A9 /* ParseChatUITests.swift */; };
 		5D5C3FC9216C041100FCC6A9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5C3FC8216C041100FCC6A9 /* LogInViewController.swift */; };
 		5DEC63CB216C148D009B2890 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC63CA216C148D009B2890 /* ChatViewController.swift */; };
+		5DEC63CE216C19ED009B2890 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEC63CD216C19ED009B2890 /* ChatCell.swift */; };
 		9C0A9559442AD62D7F208266 /* Pods_ParseChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF4C8716A57FF85E017911F /* Pods_ParseChatUITests.framework */; };
 		E23BB9E7EC5FD7B1190A0338 /* Pods_ParseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1FC412CF60BFA10FD1E71E /* Pods_ParseChat.framework */; };
 		E2F2BC046E14D601ECDE5D3C /* Pods_ParseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DB0292B02293F744040649 /* Pods_ParseChatTests.framework */; };
@@ -55,6 +56,7 @@
 		5D5C3FBC216BFEE000FCC6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D5C3FC8216C041100FCC6A9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5DEC63CA216C148D009B2890 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5DEC63CD216C19ED009B2890 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		614438F68C3BC630A0E4C003 /* Pods-ParseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChatUITests/Pods-ParseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6A68DCE8F03E6ECEA8E2D759 /* Pods-ParseChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChatTests/Pods-ParseChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C0C680E544A6C23E2E1023 /* Pods-ParseChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChatTests/Pods-ParseChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,13 +131,13 @@
 		5D5C3F99216BFEDE00FCC6A9 /* ParseChat */ = {
 			isa = PBXGroup;
 			children = (
-				5DEC63CA216C148D009B2890 /* ChatViewController.swift */,
-				5D5C3FC8216C041100FCC6A9 /* LogInViewController.swift */,
+				5DEC63CC216C18E4009B2890 /* View Controllers */,
 				5D5C3F9A216BFEDE00FCC6A9 /* AppDelegate.swift */,
 				5D5C3F9E216BFEDE00FCC6A9 /* Main.storyboard */,
 				5D5C3FA1216BFEE000FCC6A9 /* Assets.xcassets */,
 				5D5C3FA3216BFEE000FCC6A9 /* LaunchScreen.storyboard */,
 				5D5C3FA6216BFEE000FCC6A9 /* Info.plist */,
+				5DEC63CD216C19ED009B2890 /* ChatCell.swift */,
 			);
 			path = ParseChat;
 			sourceTree = "<group>";
@@ -156,6 +158,15 @@
 				5D5C3FBC216BFEE000FCC6A9 /* Info.plist */,
 			);
 			path = ParseChatUITests;
+			sourceTree = "<group>";
+		};
+		5DEC63CC216C18E4009B2890 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D5C3FC8216C041100FCC6A9 /* LogInViewController.swift */,
+				5DEC63CA216C148D009B2890 /* ChatViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		E28401EC16107CF68722AE11 /* Frameworks */ = {
@@ -381,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5C3FC9216C041100FCC6A9 /* LogInViewController.swift in Sources */,
+				5DEC63CE216C19ED009B2890 /* ChatCell.swift in Sources */,
 				5DEC63CB216C148D009B2890 /* ChatViewController.swift in Sources */,
 				5D5C3F9B216BFEDE00FCC6A9 /* AppDelegate.swift in Sources */,
 			);

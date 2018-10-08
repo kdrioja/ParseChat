@@ -9,9 +9,9 @@
 import UIKit
 import Parse
 
-class ChatViewController: UIViewController {
-
+class ChatViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
     override func viewDidLoad() {
@@ -19,7 +19,6 @@ class ChatViewController: UIViewController {
 
         
     }
-    
     
     @IBAction func onSend(_ sender: Any) {
         let chatMessage = PFObject(className: "Message")
@@ -34,6 +33,23 @@ class ChatViewController: UIViewController {
                 print("Problem saving message: \(error.localizedDescription)")
             }
         }
+    }
+    
+    @objc func onTimer() {
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+    }
+    
+    func fetchChats() {
+        let query = PFObject(className: "Message").query()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
     
 }
