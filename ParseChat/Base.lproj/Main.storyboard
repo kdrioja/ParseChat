@@ -95,12 +95,18 @@
                                 <rect key="frame" x="317" y="78" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSend:" destination="Ang-dd-O6X" eventType="touchUpInside" id="nrK-2W-uUG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Frd-1k-rzZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="CAm-Eb-9yt"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="dEv-wZ-V5j" id="FSi-9K-mRa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1Z-vK-JLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
