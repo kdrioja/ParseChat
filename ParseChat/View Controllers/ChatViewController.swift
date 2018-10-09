@@ -41,10 +41,17 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     func refresh() {
         let query = Message.query()
         query?.addDescendingOrder("createdAt")
-        query?.findObjectsInBackground(block: { (messages: [PFObject]?, error: Error?) in
-            <#code#>
+        query?.findObjectsInBackground(block: { (objects: [PFObject]?, error: Error?) in
+            if error == nil {
+                //successfully found the objects
+                if let objects = objects {
+                    self.messages = objects as! [Message]
+                }
+            }
+            else {
+                print("There was an error fetching the objects")
+            }
         })
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
