@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 class Message: PFObject, PFSubclassing {
+    @NSManaged var user: PFUser!
     @NSManaged var text: String?
     
     class func parseClassName() -> String {
