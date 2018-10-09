@@ -19,7 +19,15 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        chatTableView.dataSource = self
+        chatTableView.rowHeight = UITableView.automaticDimension
+        chatTableView.estimatedRowHeight = 50
+        
+        /*
+         tableView.insertSubview(refreshControl, at: 0) //0 for the very top
+         tableView.rowHeight = UITableViewAutomaticDimension
+         tableView.estimatedRowHeight = 50
+ */
         
     }
     
@@ -59,7 +67,9 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let chatCell = ChatCell()
+        
+        return chatCell
     }
     
 }

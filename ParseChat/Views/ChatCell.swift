@@ -11,6 +11,8 @@ import Parse
 
 class ChatCell: UITableViewCell {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
