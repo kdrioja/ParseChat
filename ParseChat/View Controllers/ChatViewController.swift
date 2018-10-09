@@ -8,11 +8,14 @@
 
 import UIKit
 import Parse
+import ParseLiveQuery
 
 class ChatViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
+    var refreshTimer: Timer!
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,8 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func onSend(_ sender: Any) {
-        let chatMessage = PFObject(className: "Message")
-        chatMessage["text"] = messageTextField.text ?? ""
+        let chatMessage = Message()
+        chatMessage.text = messageTextField.text ?? ""
         
         chatMessage.saveInBackground { (success: Bool, error: Error?) in
             if success {
@@ -35,17 +38,17 @@ class ChatViewController: UIViewController, UITableViewDataSource {
         }
     }
     
-    @objc func onTimer() {
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
-    }
-    
-    func fetchChats() {
-        let query = PFObject(className: "Message").query()
+    func refresh() {
+        let query = Message.query()
+        query?.addDescendingOrder("createdAt")
+        query?.findObjectsInBackground(block: { (messages: [PFObject]?, error: Error?) in
+            <#code#>
+        })
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
