@@ -15,7 +15,13 @@ class ChatCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        messageLabel.preferredMaxLayoutWidth = messageLabel.frame.size.width
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        messageLabel.preferredMaxLayoutWidth = messageLabel.frame.size.width
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

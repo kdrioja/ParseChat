@@ -45,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ParseChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXe-3a-b2c">
                                 <rect key="frame" x="123" y="101" width="128" height="36"/>
@@ -104,21 +104,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="90" id="Ro1-r5-duk" customClass="ChatCell" customModule="ParseChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="200" id="Ro1-r5-duk" customClass="ChatCell" customModule="ParseChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ro1-r5-duk" id="E58-aR-Ezi">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Username" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUU-vc-TAl">
-                                                    <rect key="frame" x="4" y="4" width="84" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Username" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUU-vc-TAl">
+                                                    <rect key="frame" x="4" y="4" width="84" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi my name is Queenie 🐶" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWa-ob-nvR">
-                                                    <rect key="frame" x="4" y="28.5" width="202.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWa-ob-nvR">
+                                                    <rect key="frame" x="4" y="23.5" width="335" height="142.5"/>
+                                                    <mutableString key="text">Hi my name is Queenie 🐶 I am a 3 year old German Shepherd Husky mix who loves to play and demand kibble. I have a sister and her name is Nala. She is a Chow Chow Terrier mix and loves to bark. My daddy tends to work a lot but he loves to cuddle me when he gets home.</mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -126,9 +127,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cUU-vc-TAl" firstAttribute="leading" secondItem="E58-aR-Ezi" secondAttribute="leading" constant="4" id="Es1-sJ-2au"/>
+                                                <constraint firstAttribute="trailing" secondItem="RWa-ob-nvR" secondAttribute="trailing" constant="4" id="JTa-fP-gJj"/>
                                                 <constraint firstItem="RWa-ob-nvR" firstAttribute="top" secondItem="cUU-vc-TAl" secondAttribute="bottom" constant="4" id="eZ2-WX-elG"/>
                                                 <constraint firstItem="RWa-ob-nvR" firstAttribute="leading" secondItem="E58-aR-Ezi" secondAttribute="leading" constant="4" id="nVk-cb-hR8"/>
                                                 <constraint firstItem="cUU-vc-TAl" firstAttribute="top" secondItem="E58-aR-Ezi" secondAttribute="top" constant="4" id="u8I-tH-q1f"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RWa-ob-nvR" secondAttribute="bottom" constant="33.5" id="uU9-C5-zvO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

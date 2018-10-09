@@ -20,9 +20,15 @@ class ChatViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         chatTableView.dataSource = self
+        chatTableView.rowHeight = 200
         chatTableView.rowHeight = UITableView.automaticDimension
         chatTableView.estimatedRowHeight = 50
         
+        /*
+        let tap: UIGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        chatTableView.addGestureRecognizer(tap)
+        */
+ 
         refreshTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
         
     }

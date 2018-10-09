@@ -1,8 +1,8 @@
 # Lab 4 - *ParseChat*
 
-**Name of your app** is a Chat app using an [open source Parse](http://parseplatform.org/) backend.
+**ParseChat** is a Chat app using an [open source Parse](http://parseplatform.org/) backend.
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -12,7 +12,7 @@ The following **required** user stories are complete:
 - [X] User sees alerts for login exceptions, i.e. "account already exists", "wrong credentials", etc. (+1pt)
 - [X] User can compose and send chat messages (+2pt)
 - [X] User can view a list of chat messages in chronological order (+2pt)
-- [ ] Automatically Adjust Cell Size to Fit Text (+1pt)
+- [X] Automatically Adjust Cell Size to Fit Text (+1pt)
 - [X] Username of chat author is displayed in each chat message (+2pt)
 - [X] Persist Logged in User (+1pt)
 
