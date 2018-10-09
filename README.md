@@ -27,6 +27,7 @@ The following **stretch** user stories are implemented:
 The following **additional** user stories are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
+- [ ] Implement a log out function on the chat screen
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -37,7 +38,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://i.imgur.com/iyFP0Zm.gif
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -47,7 +48,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Copy right owner]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
